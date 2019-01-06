@@ -29,7 +29,7 @@ $("ul").on("click", "span", function (event) {
     })
     //jQuery Method stop anyother listener
     event.stopPropagation();
-})
+});
 
 //add todo
 $("input[type='text']").keypress(function (event) {
@@ -38,6 +38,11 @@ $("input[type='text']").keypress(function (event) {
         let newTodoText = $(this).val();
         $(this).val("");
         console.log(newTodoText);
-        $("ul").append("<li><span>X </span>" + newTodoText + "</li>");
+        $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span>" + newTodoText + "</li>");
     }
+});
+
+//
+$(".fa-plus").click(function() {
+    $("input[type='text']").fadeToggle(500);
 })

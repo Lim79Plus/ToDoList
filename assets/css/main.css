@@ -1,17 +1,92 @@
+body{
+  background: #3CA55C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 body {
-    background: linear-gradient(#05FBFF, #1E00FF);
-    height: -webkit-fill-available;
+    font-family: 'Roboto';
   }
 
 .container{
-  background: limegreen;
   width:360px;
-  margin: 0 auto;
-  border: 2px solid gray;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 h1{
-  color: #1E00FF;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h1{
+  background: #3CA55C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fa-plus{
+  float: right;
+}
+
+input[type="text"]{
+  line-height: 40px;
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 13px 13px 13px 20px;
+  /* avoid size over that parent size */
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #3CA55C;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input[type="text"]:focus{
+  background: #fff;
+  border: 3px solid #3CA55C;
+  outline: none;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  font-size: 15px;
+  font-weight: 300;
+  /* when you set same amount in height and line-height,
+     the words show in the one line */
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+
+li:nth-of-type(odd){
+  background: white;
+}
+
+li span{
+  background: #e74c3c;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+li:hover span{
+  width: 40px;
+  opacity: 1.0;
 }
 
 .listCompleted{
